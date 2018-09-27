@@ -1,0 +1,11 @@
+C:\Users\1\source\repos\Messanger\WebUIApp\bin\Debug\netcoreapp2.0\WebAPIApp.deps.json
+C:\Users\1\source\repos\Messanger\WebUIApp\bin\Debug\netcoreapp2.0\WebAPIApp.runtimeconfig.json
+C:\Users\1\source\repos\Messanger\WebUIApp\bin\Debug\netcoreapp2.0\WebAPIApp.runtimeconfig.dev.json
+C:\Users\1\source\repos\Messanger\WebUIApp\bin\Debug\netcoreapp2.0\WebAPIApp.dll
+C:\Users\1\source\repos\Messanger\WebUIApp\bin\Debug\netcoreapp2.0\WebAPIApp.pdb
+C:\Users\1\source\repos\Messanger\WebUIApp\obj\Debug\netcoreapp2.0\WebAPIApp.csprojAssemblyReference.cache
+C:\Users\1\source\repos\Messanger\WebUIApp\obj\Debug\netcoreapp2.0\WebAPIApp.csproj.CoreCompileInputs.cache
+C:\Users\1\source\repos\Messanger\WebUIApp\obj\Debug\netcoreapp2.0\WebAPIApp.AssemblyInfoInputs.cache
+C:\Users\1\source\repos\Messanger\WebUIApp\obj\Debug\netcoreapp2.0\WebAPIApp.AssemblyInfo.cs
+C:\Users\1\source\repos\Messanger\WebUIApp\obj\Debug\netcoreapp2.0\WebAPIApp.dll
+C:\Users\1\source\repos\Messanger\WebUIApp\obj\Debug\netcoreapp2.0\WebAPIApp.pdb

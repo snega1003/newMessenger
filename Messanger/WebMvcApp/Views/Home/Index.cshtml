@@ -1,0 +1,161 @@
+﻿@*@{
+        ViewData["Title"] = "Home Page";
+    }*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
+
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <title>@ViewData["Title"] = "Home Page"</title>
+</head>
+<body>
+    <div style="margin: 0 auto; width: 900px;">
+        <div style="margin-top: 10px;">
+            <b>Hello, @ViewData["username"]</b>
+        </div>
+        <div class="users" style="float:left; width: 300px; height: 500px; overflow-y: auto;">
+            <div class="input-group">
+                <input id="addContact" type="text" class="form-control" placeholder="Добавить контакт..." aria-describedby="basic-addon2" style="width: 200px;">
+                <button id="btnAddContact" class="btn btn-primary" style="width: 100px;">Добавить</button>
+            </div>
+            <div id="contacts"></div>
+            <div class="input-group">
+                <input id="removeContact" type="text" class="form-control" placeholder="Удалить контакт..." aria-describedby="basic-addon2" style="width: 200px;">
+                <button id="btnRemoveContact" class="btn btn-primary" style="width: 100px;">Удалить</button>
+            </div>
+        </div>
+        <div id="messages" class="messages thumbnail" style=" width: 600px; height: 500px; overflow-y: auto;"></div>
+
+        <div class="input-group">
+            <input id="text" type="text" class="form-control" placeholder="Введите текст..." aria-describedby="basic-addon2" style="width: 750px;">
+            <button id="sendMessage" class="btn btn-primary" style="width: 150px;">Отправить</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+	$.ajaxSetup({
+		crossDomain: true
+	});
+    //обновление сообщений
+    window.setInterval(function () {
+        if (window.ToID != null) {
+            messagesData = {};
+            messagesData['FromID'] = "@ViewData["username"]";
+            messagesData['ToID'] = window.ToID;
+            $.ajax({
+                type: "get",
+                url: "http://localhost:52129/Messages/GetMessages/",
+                data: messagesData,
+                success: function (data) {
+                    $("#messages").empty();
+                    $("#messages").append(data);
+                    //$("#messages").scrollTop(10000000000000);
+                }
+            });
+        }
+    }, 250);
+
+    //44337   //192.168.0.102 
+    //отправка сообщения
+    $("#sendMessage").click(function () {
+        if (window.ToID != null) {
+            data = {};
+            data['Text'] = $("#text").val();
+            data['FromID'] = "@ViewData["username"]";
+            data['ToID'] = window.ToID;
+            $.post({
+                url: "https://localhost:52129/Messages/Create",
+                data: data,
+                success: function (data) {
+                    $("#messages").empty();
+                    messagesData['ToID'] = window.ToID;
+                    $.ajax({
+                        type: "get",
+                        url: "https://localhost:52129/Messages/GetMessages/",
+                        data: messagesData,
+                        success: function (data) {
+                            $("#messages").append(data);
+                            $("#messages").scrollTop(10000000000000);
+                        }
+                    });
+                }
+            });
+        }
+        else {
+            alert("Вы не выбрали собеседника!");
+        }
+    });
+
+    contactsData = {};
+    contactsData["User"] = "@ViewData["username"]";
+
+    //обновление контактов при загрузке страницы
+    $.ajax({
+        type: "get",
+        url: "https://localhost:52129/Contacts/GetContacts/",
+        data: contactsData,
+        success: function (data) {
+            $("#contacts").append(data);
+            $("#messages").scrollTop(10000000000000);
+        }
+    });
+
+    //добавление контакта
+    $("#btnAddContact").click(function () {
+        data = {};
+        data['User'] = "@ViewData["username"]";
+        data['username'] = $("#addContact").val();
+        $.post({
+            url: "https://localhost:52129/Contacts/Add",
+            data: data,
+            success: function (data) {
+                $("#contacts").empty();
+                $.ajax({
+                    type: "get",
+                    url: "https://localhost:52129/Contacts/GetContacts/",
+                    data: contactsData,
+                    success: function (data) {
+                        $("#contacts").append(data);
+                        $("#messages").scrollTop(10000000000000);
+                    }
+                });
+            }
+        });
+    });
+
+    //удаление контакта
+    $("#btnRemoveContact").click(function () {
+        data = {};
+        data['User'] = "@ViewData["username"]";
+        data['username'] = $("#removeContact").val();
+        $.post({
+            url: "https://localhost:52129/Contacts/Delete",
+            data: data,
+            success: function (data) {
+                $("#contacts").empty();
+                $.ajax({
+                    type: "get",
+                    url: "https://localhost:52129/Contacts/GetContacts/",
+                    data: contactsData,
+                    success: function (data) {
+                        $("#contacts").append(data);
+                        $("#messages").scrollTop(10000000000000);
+                    }
+                });
+            }
+        });
+    });
+
+
+</script>

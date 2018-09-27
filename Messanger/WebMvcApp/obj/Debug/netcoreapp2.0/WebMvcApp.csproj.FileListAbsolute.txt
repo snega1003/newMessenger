@@ -1,0 +1,12 @@
+c:\users\1\source\repos\Messanger\WebMvcApp\bin\Debug\netcoreapp2.0\WebMvcApp.deps.json
+c:\users\1\source\repos\Messanger\WebMvcApp\bin\Debug\netcoreapp2.0\WebMvcApp.runtimeconfig.json
+c:\users\1\source\repos\Messanger\WebMvcApp\bin\Debug\netcoreapp2.0\WebMvcApp.runtimeconfig.dev.json
+c:\users\1\source\repos\Messanger\WebMvcApp\bin\Debug\netcoreapp2.0\WebMvcApp.dll
+c:\users\1\source\repos\Messanger\WebMvcApp\bin\Debug\netcoreapp2.0\WebMvcApp.pdb
+c:\users\1\source\repos\Messanger\WebMvcApp\obj\Debug\netcoreapp2.0\WebMvcApp.csprojAssemblyReference.cache
+c:\users\1\source\repos\Messanger\WebMvcApp\obj\Debug\netcoreapp2.0\WebMvcApp.csproj.CoreCompileInputs.cache
+c:\users\1\source\repos\Messanger\WebMvcApp\obj\Debug\netcoreapp2.0\WebMvcApp.AssemblyInfoInputs.cache
+c:\users\1\source\repos\Messanger\WebMvcApp\obj\Debug\netcoreapp2.0\WebMvcApp.AssemblyInfo.cs
+c:\users\1\source\repos\Messanger\WebMvcApp\obj\Debug\netcoreapp2.0\WebMvcApp.dll
+c:\users\1\source\repos\Messanger\WebMvcApp\obj\Debug\netcoreapp2.0\WebMvcApp.pdb
+C:\Users\1\source\repos\Messanger\WebMvcApp\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

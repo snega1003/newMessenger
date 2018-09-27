@@ -1,0 +1,11 @@
+c:\users\1\source\repos\Messanger\MvcApp\bin\Debug\netcoreapp2.0\MvcApp.deps.json
+c:\users\1\source\repos\Messanger\MvcApp\bin\Debug\netcoreapp2.0\MvcApp.runtimeconfig.json
+c:\users\1\source\repos\Messanger\MvcApp\bin\Debug\netcoreapp2.0\MvcApp.runtimeconfig.dev.json
+c:\users\1\source\repos\Messanger\MvcApp\bin\Debug\netcoreapp2.0\MvcApp.dll
+c:\users\1\source\repos\Messanger\MvcApp\bin\Debug\netcoreapp2.0\MvcApp.pdb
+c:\users\1\source\repos\Messanger\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.csprojAssemblyReference.cache
+c:\users\1\source\repos\Messanger\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.csproj.CoreCompileInputs.cache
+c:\users\1\source\repos\Messanger\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.AssemblyInfoInputs.cache
+c:\users\1\source\repos\Messanger\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.AssemblyInfo.cs
+c:\users\1\source\repos\Messanger\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.dll
+c:\users\1\source\repos\Messanger\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.pdb
